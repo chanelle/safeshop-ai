@@ -1,0 +1,230 @@
+/* --- Base --- */
+body {
+    font-family: 'Roboto', sans-serif; /* New font from Example 1 */
+    background: #f0f4f9; /* Fallback */
+    width: 350px;
+    margin: 0;
+    padding: 0;
+    color: #1a202c;
+}
+
+.hidden {
+    display: none !important;
+}
+
+/* --- Glassmorphism Container (Example 2) --- */
+.glass-container {
+    background: linear-gradient(160deg, rgba(255, 255, 255, 0.7) 0%, rgba(255, 255, 255, 0.4) 100%);
+    backdrop-filter: blur(25px) saturate(200%);
+    -webkit-backdrop-filter: blur(25px) saturate(200%);
+    border-radius: 16px; /* Rounded corners */
+    border: 1px solid rgba(255, 255, 255, 0.6);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* --- Header & Logo --- */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 12px;
+}
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+.logo h1 {
+    font-size: 18px;
+    font-weight: 700;
+    margin: 0;
+}
+.logo-shield {
+    width: 24px;
+    height: 28px;
+    background: linear-gradient(145deg, #4A90E2, #0052D4); /* New blue (Example 2) */
+    clip-path: polygon(50% 0%, 100% 10%, 100% 60%, 50% 100%, 0% 60%, 0% 10%);
+}
+
+/* --- Main Content (Hierarchy from Example 2) --- */
+.content {
+    text-align: center;
+}
+.title {
+    font-size: 22px;
+    font-weight: 700;
+    margin: 16px 0 8px;
+    color: #1a202c;
+}
+.subtitle {
+    font-size: 14px;
+    color: #4a5568;
+    margin-top: 0;
+    margin-bottom: 20px;
+    line-height: 1.5;
+}
+
+/* --- New Button (Shadow & Icon from Example 1) --- */
+.analyze-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    font-weight: 500;
+    color: #fff;
+    background: linear-gradient(90deg, #4A90E2 0%, #0052D4 100%);
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    /* Button Shadow from Example 1 */
+    box-shadow: 0 4px 15px rgba(0, 82, 212, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px; /* Space for icon */
+}
+.analyze-button:hover {
+    box-shadow: 0 6px 20px rgba(0, 82, 212, 0.3);
+    transform: translateY(-2px);
+}
+.analyze-button:disabled {
+    background: #b0bec5;
+    box-shadow: none;
+    transform: none;
+    cursor: not-allowed;
+    opacity: 0.7;
+}
+.analyze-button svg {
+    stroke: #fff;
+    transition: transform 0.2s ease;
+}
+.analyze-button:hover svg {
+    transform: scale(1.1) rotate(-5deg);
+}
+
+/* --- Report Cards (Layered Element from Example 2) --- */
+.report-card {
+    margin-top: 20px;
+    padding: 16px;
+    border-radius: 12px;
+    text-align: left;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    /* Layered effect */
+    background: rgba(255, 255, 255, 0.7);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+.report-icon {
+    font-size: 24px;
+    font-weight: 700;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+    color: #fff;
+}
+.report-card h2 {
+    text-align: center;
+    font-size: 18px;
+    margin-top: 0;
+    margin-bottom: 16px;
+}
+.report-details {
+    font-size: 14px;
+    line-height: 1.6;
+}
+.report-details strong {
+    font-weight: 700;
+    color: #1a202c;
+}
+.report-details p {
+    color: #4a5568;
+    margin: 4px 0 12px;
+}
+
+/* Report Card Colors */
+.report-card.green { border-left: 4px solid #26b373; }
+.report-card.green .report-icon { background-color: #26b373; }
+.report-card.green h2 { color: #1a7d50; }
+
+.report-card.yellow { border-left: 4px solid #ffb300; }
+.report-card.yellow .report-icon { background-color: #ffb300; }
+.report-card.yellow h2 { color: #b37d00; }
+
+.report-card.red { border-left: 4px solid #d8000c; }
+.report-card.red .report-icon { background-color: #d8000c; }
+.report-card.red h2 { color: #a80009; }
+
+/* --- Footer Trustmark (Example 1) --- */
+.footer {
+    padding: 12px 20px;
+    background: #fff;
+    border-bottom-left-radius: 16px;
+    border-bottom-right-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    font-size: 12px;
+    font-weight: 500;
+    color: #718096;
+}
+.footer svg {
+    stroke: #718096;
+}
+
+/* --- Star Elements (Example 1) --- */
+.stars {
+    position: absolute;
+    top: 60px;
+    right: 30px;
+    width: 10px;
+    height: 10px;
+    background: #7c3aed; /* Purple star */
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: sparkle 2s infinite ease-in-out;
+}
+.stars::before {
+    content: '';
+    position: absolute;
+    top: -40px;
+    left: 20px;
+    width: 6px;
+    height: 6px;
+    background: #7c3aed;
+    clip-path: polygon(50% 0%, 61% 35%, 98% 35%, 68% 57%, 79% 91%, 50% 70%, 21% 91%, 32% 57%, 2% 35%, 39% 35%);
+    animation: sparkle 2s infinite ease-in-out 0.5s;
+}
+@keyframes sparkle {
+    0%, 100% { transform: scale(1); opacity: 0.7; }
+    50% { transform: scale(1.5); opacity: 1; }
+}
+
+/* --- Spinner & Error --- */
+.loading-area { margin-top: 20px; color: #4a5568; }
+.spinner {
+    width: 24px;
+    height: 24px;
+    border: 3px solid rgba(0, 0, 0, 0.1);
+    border-top: 3px solid #0052D4;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin: 0 auto 10px;
+}
+@keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+.error-area {
+    margin-top: 16px;
+    background: rgba(255, 235, 235, 0.7);
+    border: 1px solid rgba(216, 0, 12, 0.3);
+    color: #d8000c;
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 13px;
+    line-height: 1.5;
+}
+

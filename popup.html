@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- 1. Use new Google Font (Roboto) as requested -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="popup.css">
+    <title>SafeShop AI</title>
+</head>
+<body>
+    <!-- 2. Main container for glass effect -->
+    <div class="glass-container">
+        
+        <!-- 3. Purple stars from Example 1 -->
+        <div class="stars"></div>
+
+        <header class="header">
+            <div class="logo">
+                <div class="logo-shield"></div>
+                <h1>SafeShop AI</h1>
+            </div>
+        </header>
+
+        <main class="content">
+            <!-- 4. Prominent hierarchy from Example 2 -->
+            <h2 class="title">Analyze This Checkout</h2>
+            <p class="subtitle">Get a real-time security analysis before you enter your card.</p>
+            
+            <button id="analyzeButton" class="analyze-button" disabled>
+                <!-- 5. Icon on button from Example 1 -->
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"></path></svg>
+                Analyze Page
+            </button>
+
+            <!-- Loading Spinner (no change) -->
+            <div id="loadingArea" class="loading-area hidden">
+                <div class="spinner"></div>
+                <p>Analyzing with on-device AI...</p>
+            </div>
+
+            <!-- Error Message (no change) -->
+            <div id="errorArea" class="error-area hidden">
+                <p>Error: AI model is not available.</p>
+            </div>
+
+            <!-- Dynamic Report Card (no change in HTML, all style) -->
+            <div id="reportArea" class="report-card hidden">
+                <div class="report-icon">
+                    <span id="reportIcon">!</span>
+                </div>
+                <h2 id="reportTitle">Risk Level: Yellow</h2>
+                <div class="report-details">
+                    <strong>What We Found:</strong>
+                    <p id="reportWhy">This site has a valid CVV field but does not appear to use 3D Secure.</p>
+                    <strong>Our Advice:</strong>
+                    <p id="reportAdvice">For extra safety, use PayPal or Google Pay.</p>
+                </div>
+            </div>
+
+        </main>
+    </div>
+
+    <!-- 6. Trustmark from Example 1 -->
+    <footer class="footer">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path></svg>
+        <span>Powered by On-Device AI</span>
+    </footer>
+
+    <script src="popup.js"></script>
+</body>
+</html>
+
