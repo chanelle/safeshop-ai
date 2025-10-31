@@ -82,7 +82,7 @@ async function analyzePage() {
       // NEW: Logic for all 3 cases
       if (lowerPageText.includes('walmart')) { // Yellow Case
         showReport(MOCK_REPORT_YELLOW);
-      } else if (lowerPageText.includes('scam-example')) { // Red Case (you can just edit the URL to include this)
+      } else if (lowerPageText.includes('bing.com')) { // Red Case (you can just edit the URL to include this)
         showReport(MOCK_REPORT_RED);
       } else { // Green Case
         showReport(MOCK_REPORT_GREEN);
