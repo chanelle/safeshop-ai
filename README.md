@@ -60,7 +60,7 @@ How to Test
 6.  Pin the extension and test it on various e-commerce checkout pages.
     
 
-_**Mock Mode Note:**_ _The AI APIs in Canary can be unreliable. For submission and demo purposes, MOCK\_AI is set to true in popup.js to ensure a consistent, working demo. You can test the three risk states by visiting URLs containing "walmart" (Yellow), "scam-example" (Red), or any other URL (Green)._
+_**Mock Mode Note:**_ _The AI APIs in Canary can be unreliable. For submission and demo purposes, MOCK\_AI is set to true in popup.js to ensure a consistent, working demo. You can test the three risk states by visiting: - GREEN: google.com - YELLOW: walmart.com - RED: bing.com ...and clicking "Analyze Page"._
 
 Future Roadmap
 --------------
@@ -86,3 +86,4 @@ This MVP is the foundation for a full B2C and B2B security suite.
     *   **Merchant Dashboard:** Sell this technology to e-commerce platforms (like Shopify, BigCommerce) so merchants can run it on their _own_ stores to find and fix vulnerabilities before they're exploited.
         
     *   **SafeShop Trust Seal:** A seal for merchants who score "Green," increasing their customer conversion rates.
+    
